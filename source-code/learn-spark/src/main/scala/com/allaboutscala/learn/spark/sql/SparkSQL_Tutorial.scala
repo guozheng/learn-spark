@@ -33,6 +33,7 @@ object SparkSQL_Tutorial extends App with Context {
     .csv("src/main/resources/question_tags_10K.csv")
     .toDF("id", "tag")
 
+  // temp view for SparkSQL
   dfTags.createOrReplaceTempView("so_tags")
 
 

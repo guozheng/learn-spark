@@ -76,9 +76,11 @@ object DataFrame_Tutorial extends App with Context {
   dfTags.groupBy("tag").count().filter("count > 5").show(10)
 
 
-  // DataFrame Query: SQL order by
+  // DataFrame Query: SQL order by tag
   dfTags.groupBy("tag").count().filter("count > 5").orderBy("tag").show(10)
 
+  // DataFrame Query: SQL order by count
+  dfTags.groupBy("tag").count().orderBy("count").show(10)
 
   // DataFrame Query: Cast columns to specific data type
   val dfQuestionsCSV = sparkSession
